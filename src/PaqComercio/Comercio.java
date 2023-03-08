@@ -14,9 +14,29 @@ abstract class Comercio {
 
     Empleado[] empleados;
 
-    public Comercio() {
-        this.VentasDiarias=new double[fila][columna];
+    public Comercio(String nombre, String direccion, String cif) {
+        Nombre = nombre;
+        Direccion = direccion;
+        Cif = cif;
     }
 
+    public String getNombre() {
+        return Nombre;
+    }
 
+    public String getDireccion() {
+        return Direccion;
+    }
+
+    public String getCif() {
+        return Cif;
+    }
+
+    public double[][] getVentasDiarias() {
+        return VentasDiarias;
+    }
+
+    public void setStock(int[] stock) {
+        Stock = stock;
+    }
 }
