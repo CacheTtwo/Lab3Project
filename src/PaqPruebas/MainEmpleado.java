@@ -9,5 +9,6 @@ public class MainEmpleado {
 
         System.out.println(""+e1.equals(e2));
 
+
     }
 }
