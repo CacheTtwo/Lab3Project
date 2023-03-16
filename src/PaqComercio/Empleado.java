@@ -22,15 +22,6 @@ public class Empleado {
         this.cargo=cargo;
 
     }
-
-    public Empleado()
-    {
-        Nombre="John Doe";
-        dirección="Calle Libia";
-        email="johndoe@hmail.com";
-
-    }
-
     public String getNombre() {
         return Nombre;
     }
