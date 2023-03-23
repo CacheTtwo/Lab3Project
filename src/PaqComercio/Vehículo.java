@@ -38,10 +38,10 @@ abstract class Vehículo implements Cloneable
 
     @Override
     public String toString() {
-        return "Vehículo{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", matrícula='" + matrícula + '\'' +
+        return "Vehículo{\n" +
+                "Marca:'" + marca + '\n' +
+                "Modelo:'" + modelo + '\n' +
+                "Matrícula:'" + matrícula + '\n' +
                 '}';
     }
 
@@ -54,4 +54,5 @@ abstract class Vehículo implements Cloneable
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
 }
