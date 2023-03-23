@@ -1,6 +1,6 @@
 package PaqComercio;
 
-abstract class Vehículo
+abstract class Vehículo implements Cloneable
 {
     protected String marca;
     protected String modelo;
@@ -45,4 +45,13 @@ abstract class Vehículo
                 '}';
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 }

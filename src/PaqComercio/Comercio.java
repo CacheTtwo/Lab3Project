@@ -23,6 +23,31 @@ abstract class Comercio implements Cloneable {
         this.empleados = new Empleado[empleados];
     }
 
+    public Comercio(Comercio C)
+    {
+        this.Nombre=C.Nombre;
+        this.Direccion=C.Direccion;
+        this.Cif=C.Cif;
+        this.Stock=new int[C.Stock.length];
+        for (int i = 0; i < this.Stock.length; i++)
+        {
+            this.Stock[i]=C.Stock[i];
+        }
+        this.VentasDiarias=new double[fila][columna];
+        for (int j = 0; j < fila; j++) {
+            for (int k = 0; k < columna; k++)
+            {
+             this.VentasDiarias[j][k]=C.VentasDiarias[j][k];
+            }
+
+        }
+        this.empleados=new Empleado[C.empleados.length];
+        for (int a = 0; a <C.empleados.length ; a++)
+        {
+            this.empleados[a]=new Empleado(C.empleados[a]);
+        }
+
+    }
 
 
     public double[][] setVentasDiarias(double dinero, int mes, int dia ) {

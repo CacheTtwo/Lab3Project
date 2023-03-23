@@ -3,7 +3,7 @@ package PaqComercio;
 import java.util.Objects;
 import java.util.SplittableRandom;
 
-public class Empleado {
+public class Empleado implements Cloneable{
     private String Nombre;
     private String dirección;
     private int Telefono;
@@ -21,6 +21,16 @@ public class Empleado {
         this.salario=salario;
         this.cargo=cargo;
 
+    }
+    public Empleado(Empleado Á)
+    {
+        this.Nombre=Á.Nombre;
+        this.dirección=Á.dirección;
+        this.Telefono=Á.Telefono;
+        this.email=Á.email;
+        this.fechaincio=Á.fechaincio;
+        this.salario=Á.salario;
+        this.cargo=Á.cargo;
     }
     public String getNombre() {
         return Nombre;
