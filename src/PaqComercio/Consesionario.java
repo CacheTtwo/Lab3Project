@@ -1,4 +1,5 @@
 package PaqComercio;
+import java.util.Arrays;
 
 public class Consesionario {
     private VehiculoVenta[] V;
@@ -32,13 +33,35 @@ public class Consesionario {
     //}
     public void añadirReparar(VehículoParaReparar aux) //Le pasamos un vehiculo a reparar que ya contiene la variable de prio
     {
-        switch (aux.getPrioridad())
+        for (int i = 0; i < R.length; i++)
         {
-            case 1:
-                for (int i = 0; i < R.length; i++) {
-                    
-                }
+            if(R==null)
+            {R[i]=aux;break;}
+        }
+            Arrays.sort(R);
+    }
+    public void RepararVehiculo(int vehiculorep)
+    {
+        R[vehiculorep].setReparado(true);
+    }
+    public void recogerVehículo(String matricula)
+    {
+        for (int i = 0; i < R.length; i++)
+        {
+            if (R[i].getMatrícula().equals(matricula)&&R[i].isReparado()==true)
+                R[i]=null;
         }
     }
+
+    public void añadirVenta(VehiculoVenta aux)
+    {
+        for (int i = 0; i < V.length; i++)
+        {
+            if(V==null)
+            {V[i]=aux;break;}
+
+        }
+    }
+
 
 }

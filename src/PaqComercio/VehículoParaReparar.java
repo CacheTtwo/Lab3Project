@@ -34,7 +34,7 @@ public class VehículoParaReparar extends Vehículo
     }
 
     public void setPrioridad(int prioridad) {
-        if (prioridad>0&&prioridad<3){
+        if (prioridad>0&&prioridad<=3){
             this.prioridad = prioridad;}
         else this.prioridad= 1;
 
